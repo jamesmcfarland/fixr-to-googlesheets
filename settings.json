@@ -8,5 +8,6 @@
     "googleSheetsMemberSpreadsheetQuery":"",
     "googleSheetsSUListSheetName":"",
     "googleSheetsFIXRSheetName":"",
-    "googleSheetsReducedFIXRSheetName":""
+    "googleSheetsReducedFIXRSheetName":"",
+    "runMins":""
 }
