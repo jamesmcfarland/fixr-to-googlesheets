@@ -1,5 +1,4 @@
 #!/bin/sh
-git gc
 git pull
 chmod a+x update.sh
 dotnet publish -c Release
