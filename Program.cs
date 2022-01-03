@@ -24,6 +24,11 @@ if(settings.email=="" ||settings.password=="" ||settings.eventId=="" ||settings.
     Environment.Exit(1);
 }
 
+if(!File.Exists("key.json")){
+    Console.WriteLine("Google keyfile not present (key.json)\nplease see the below link on how to configure a service account\nhttps://developers.google.com/workspace/guides/create-credentials#service-account");
+    Environment.Exit(1);
+}
+
 string downloadDir = Path.Combine(Environment.CurrentDirectory, "Downloads");
 
 
