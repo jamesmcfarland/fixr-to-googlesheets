@@ -1,4 +1,5 @@
 #!/bin/sh
+git update-index --skip-worktree settings.json
 git pull
 chmod a+x update.sh
 dotnet publish -c Release
