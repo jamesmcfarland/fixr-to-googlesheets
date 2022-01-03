@@ -2,6 +2,28 @@ class QCSFixrAttendeeData : FixrAttendeeData
 {
     public string Course { get; set; } = "";
     public string StudentNo { get; set; } = "";
+    private string _QUBEmail = "";
+    public string QUBEmail
+    {
+        get
+        {
+            if (_QUBEmail == "" || !_QUBEmail.Contains("qub.ac.uk"))
+            {
+                if (!Email.Contains("qub.ac.uk"))
+                {
+                    //Use Active Directory email
+                    return $"{StudentNo}@ads.qub.ac.uk";
+
+                }
+                else return Email;
+            }
+            else return _QUBEmail;
+        }
+        set
+        {
+            _QUBEmail = value;
+        }
+    }
     public string Year { get; set; } = "";
 
     public List<Object> asSUList()
@@ -11,7 +33,7 @@ class QCSFixrAttendeeData : FixrAttendeeData
            FirstName,
            LastName,
            (TicketTypeName=="Non-Student Membership")?"Not Provided":StudentNo,
-           (TicketTypeName=="Non-Student Membership")?"Not Provided":Email,
+           (TicketTypeName=="Non-Student Membership")?"Not Provided":QUBEmail,
            (TicketTypeName=="Non-Student Membership")?Email:"Not Provided",
 
        };
@@ -22,25 +44,24 @@ class QCSFixrAttendeeData : FixrAttendeeData
            FirstName,
            LastName,
            (TicketTypeName=="Non-Student Membership")?"Not Provided":StudentNo,
-           (TicketTypeName=="Non-Student Membership")?"Not Provided":Email,
+           (TicketTypeName=="Non-Student Membership")?"Not Provided":QUBEmail,
            (TicketTypeName=="Non-Student Membership")?Email:"Not Provided",
 
        };
     }
 
-      public List<Object> asFIXRList()
+    public List<Object> asFIXRList()
     {
         return new List<object>() {
             SoldAt,
-           FirstName,
-           LastName,
-          Email,
-          Course,
-          
-    
-           (TicketTypeName=="Non-Student Membership")?"Not Provided":StudentNo,
-           Year,
-           TicketTypeName
+            FirstName,
+            LastName,
+            Email,
+            Course,
+            (TicketTypeName=="Non-Student Membership")?"Not Provided":StudentNo,
+            Year,
+            TicketTypeName,
+            QUBEmail
 
        };
     }

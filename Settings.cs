@@ -11,6 +11,7 @@ public class Settings
     public string googleSheetsReducedFIXRSheetName { get; set; }="";
     public string googleSheetsFIXRSheetName { get; set; }="";
     public string googleSheetsSUListSheetName { get; set; }="";
+    public string runMins { get; set; }="";
 
     public Settings(){}
 }
