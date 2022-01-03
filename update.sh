@@ -7,3 +7,4 @@ cd bin/Release/net6.0
 pm2 stop "dotnet fixr"
 pm2 delete "dotnet fixr"
 pm2 start "dotnet fixr.dll"
+pm2 save
