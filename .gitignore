@@ -1,0 +1,8 @@
+credentials.json
+key.json
+Chrome/
+.vscode/
+bin/
+obj/
+Downloads/
+settings-*

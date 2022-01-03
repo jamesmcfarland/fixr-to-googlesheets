@@ -1,0 +1,12 @@
+{
+    "email":"",
+    "password":"",
+    "eventId":"",
+    "googleSheetsKeyfilePath":"",
+    "googleSheetsApplicationName":"",
+    "googleSheetsMemberSpreadsheetID":"",
+    "googleSheetsMemberSpreadsheetQuery":"",
+    "googleSheetsSUListSheetName":"",
+    "googleSheetsFIXRSheetName":"",
+    "googleSheetsReducedFIXRSheetName":""
+}
