@@ -1,5 +1,4 @@
 #!/bin/sh
-git reset --hard
 git gc
 git pull
 chmod a+x update.sh
