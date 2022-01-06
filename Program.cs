@@ -227,7 +227,7 @@ try
 }
 catch (Exception e)
 {
-    Console.WriteLine("Exception occured in program. Waiting 1/2 of runMins before trying again. " + e.StackTrace);
+    Console.WriteLine("Exception occured in program. Waiting 1/2 of runMins before trying again. \n" + e.StackTrace+"\n"+e.Message);
     try
     {
         driver.Quit();
