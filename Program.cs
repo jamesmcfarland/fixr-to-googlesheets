@@ -33,7 +33,7 @@ if (!File.Exists("key.json"))
 
 string downloadDir = Path.Combine(Environment.CurrentDirectory, "Downloads");
 
-var driver = null;
+ChromeDriver driver = null;
 
 try
 {
